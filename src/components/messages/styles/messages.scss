@@ -30,6 +30,7 @@
                 border-radius: 0.3rem;
             }
         }
+        
     
         .message-box {
             width: 100%;
@@ -70,8 +71,17 @@
                     background-color: #B3B3B3;
                 }
             }
+
+            .message-body-tablet-mobile {
+                display: none;
+            }
+
+            a {
+                color: #121212;
+                text-decoration: none;
+            }
     
-            .message-body {
+            .message-body, .message-body-tablet-mobile {
                 border-top: none !important;
                 border: 1px solid black;
                 border-radius: 0 0 0.3rem 0.3rem;
@@ -79,6 +89,7 @@
                 position: relative; 
                 font-size: 0.7rem;
                 cursor: pointer;
+
                 
                 .message-text {
                     max-width: 90%;
@@ -102,7 +113,23 @@
                     font-weight: bold;
                 }
             }
+
+            @media screen and (max-width: 768px) {
+                .message-body {
+                    display: none;
+                }
+
+                .message-body-tablet-mobile {
+                    display: inline;
+                }
+            }
         }
     }
-    
+
+    @media screen and (max-width: 768px) {
+        .messages-section {
+            width: 100%;
+            margin-right: 0;
+        }
+    }  
 }

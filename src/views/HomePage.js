@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import {Route} from 'react-router-dom'
 import Header from '../components/layout/Header';
+import EachMessage from '../components/messages/EachMessage';
 import MessageOutput from '../components/messages/MessageOutput';
 import Messages from '../components/messages/Messages';
 
 const HomePage = () => {
+
+    const [eachMessage, setEachMessage] = useState(null)
 
     return (
         <>
@@ -13,12 +16,12 @@ const HomePage = () => {
             <div className="content-section">
                 <div className="component-content-section">
 
-                    <Route path="/messages">
-                        <Messages />
+                    <Route exact path="/messages">
+                        <Messages eachMessage={eachMessage} setEachMessage={setEachMessage}/>
                     </Route>
 
-                    <Route path="/message">
-                        <MessageOutput />
+                    <Route exact path="/messages/:id">
+                        <MessageOutput message={eachMessage}/>
                     </Route>
 
                 </div>

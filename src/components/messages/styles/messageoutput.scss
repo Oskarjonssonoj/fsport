@@ -1,28 +1,33 @@
 .message-output-section {
     width: 90%;
+}
 
-    .output-title {
-        border-bottom: 1px solid gray;
-
-        div {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            flex-wrap: wrap;
-
-            p {
-                font-size: 0.8rem;
-                color: gray;
-            }
-        }
+@media screen and (max-width: 768px) {
+    .message-output-section {
+        display: none;
     }
+}
 
-    .output-body {
+.output-title {
+    border-bottom: 1px solid gray;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        flex-wrap: wrap;
 
         p {
-            margin-top: 2rem;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            color: gray;
         }
     }
+}
 
+.output-body {
+
+    p {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+    }
 }
