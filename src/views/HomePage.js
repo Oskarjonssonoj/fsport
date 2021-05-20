@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {Route} from 'react-router-dom'
 import Header from '../components/layout/Header';
-import EachMessage from '../components/messages/EachMessage';
 import MessageOutput from '../components/messages/MessageOutput';
 import Messages from '../components/messages/Messages';
 

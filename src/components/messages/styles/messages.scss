@@ -37,7 +37,8 @@
             margin-bottom: 2rem;
             display: flex;
             flex-direction: column;
-            color: #121212;  
+            color: #121212;
+            transition: 0.3s; 
     
             .message-title {
                 display: flex;
@@ -88,7 +89,7 @@
                 height: 5rem;
                 position: relative; 
                 font-size: 0.7rem;
-                cursor: pointer;
+                cursor: pointer; 
 
                 
                 .message-text {
@@ -123,6 +124,10 @@
                     display: inline;
                 }
             }
+        }
+
+        .message-box:hover {
+            background-color: #e7e7e7;
         }
     }
 
