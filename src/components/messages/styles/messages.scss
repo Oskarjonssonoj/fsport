@@ -1,77 +1,107 @@
-.messages-section {
+.inbox-and-messages {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 
-    .message-box {
-        width: 22%;
-        margin-bottom: 2.5rem;
+    .messages-section {
         display: flex;
+        width: 25rem;
         flex-direction: column;
-        color: #121212;  
-
-        .message-title {
-            display: flex;
-            height: 2rem;
-            border: 1px solid black;
-            border-radius: 0.3rem 0.3rem 0rem 0rem; 
-            align-items: center;
-            overflow: hidden;
-            justify-content: space-between;
-            position: relative;
-
-            h4 {
-                margin-left: 1rem;
-            }
-
-            .checkbox {
-                height: 100%;
-                width: 30%;
-                transform: skewX(-40deg);
-                position: absolute;
-                right: -1rem;
-                cursor: pointer;          
-            }
-
-            #active {
-                background-color: #E78C00;
-            }
-
-            #inactive {
-                background-color: #B3B3B3;
+        overflow: scroll;
+        height: 85vh;
+        position: relative;
+        margin-right: 2.5rem;
+    
+        .search-field {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            margin-bottom: 1rem;
+            background-color: white;
+            padding-bottom: 1rem;
+    
+            input {
+                width: 100%;
+                background-color: white;
+                height: 2rem;
+                border: solid 1px gray;
+                padding-left: 1rem;
+                border-radius: 0.3rem;
             }
         }
-
-        .message-body {
-            border-top: none !important;
-            border: 1px solid black;
-            border-radius: 0rem 0rem 0.3rem 0.3rem;
-            height: 6rem;
-            position: relative; 
-            font-size: 0.7rem;
-            
-            .message-text {
-                max-width: 90%;
-                width: 90%;
-                padding: 0.5rem 1rem;
-                -moz-binding: url(resource:/xml/ellipsis.xml#ellipsis);
-                -ms-text-overflow: ellipsis;
-                -o-text-overflow: ellipsis;
+    
+        .message-box {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            color: #121212;  
+    
+            .message-title {
+                display: flex;
+                height: 2rem;
+                border: 1px solid black;
+                border-radius: 0.3rem 0.3rem 0 0; 
+                align-items: center;
                 overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                border-top: solid white 1px;
-                border-radius: 0 !important;
-                text-align: start;
+                justify-content: space-between;
+                position: relative;
+    
+                h4 {
+                    margin-left: 1rem;
+                    font-size: 0.9rem;
+                }
+    
+                .checkbox {
+                    height: 100%;
+                    width: 30%;
+                    transform: skewX(-40deg);
+                    position: absolute;
+                    right: -1rem;
+                    cursor: pointer;          
+                }
+    
+                #active {
+                    background-color: #E78C00;
+                }
+    
+                #inactive {
+                    background-color: #B3B3B3;
+                }
             }
-
-            .message-time {
-                position: absolute;
-                bottom: 0.5rem;
-                right: 1rem;
-                font-weight: bold;
+    
+            .message-body {
+                border-top: none !important;
+                border: 1px solid black;
+                border-radius: 0 0 0.3rem 0.3rem;
+                height: 5rem;
+                position: relative; 
+                font-size: 0.7rem;
+                
+                .message-text {
+                    max-width: 90%;
+                    width: 90%;
+                    padding: 0.5rem 1rem;
+                    -moz-binding: url(resource:/xml/ellipsis.xml#ellipsis);
+                    -ms-text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    border-top: solid white 1px;
+                    border-radius: 0 !important;
+                    text-align: start;
+                }
+    
+                .message-time {
+                    position: absolute;
+                    bottom: 0.5rem;
+                    right: 1rem;
+                    font-weight: bold;
+                }
             }
         }
     }
+    
 }
