@@ -1,8 +1,28 @@
 .message-output-section {
     width: 90%;
 
-    h2 {
+    .output-title {
         border-bottom: 1px solid gray;
-        padding-bottom: 0.5rem;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            flex-wrap: wrap;
+
+            p {
+                font-size: 0.8rem;
+                color: gray;
+            }
+        }
     }
+
+    .output-body {
+
+        p {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    }
+
 }

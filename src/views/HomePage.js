@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Route} from 'react-router-dom'
 import Header from '../components/layout/Header';
+import MessageOutput from '../components/messages/MessageOutput';
 import Messages from '../components/messages/Messages';
 
 const HomePage = () => {
@@ -14,6 +15,10 @@ const HomePage = () => {
 
                     <Route path="/messages">
                         <Messages />
+                    </Route>
+
+                    <Route path="/message">
+                        <MessageOutput />
                     </Route>
 
                 </div>

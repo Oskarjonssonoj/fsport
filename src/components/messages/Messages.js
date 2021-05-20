@@ -25,9 +25,6 @@ const Messages = () => {
         queryRef.current.focus();
     }, [])
 
-    const openMessage = () => {
-        console.log("hej")
-    }
 
     return (
         <div className="inbox-and-messages">
