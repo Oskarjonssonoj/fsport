@@ -47,7 +47,7 @@ const Messages = ({eachMessage, setEachMessage}) => {
 
                 {
                     messagesSearch.map((message, index) => {
-                        return <Message message={message} setEachMessage={setEachMessage} mark={markAMasg} checked={checked} index={index}/>
+                        return <Message message={message} eachMessage={eachMessage} setEachMessage={setEachMessage} mark={markAMasg} checked={checked} index={index}/>
                     })
                 }
             </div>
