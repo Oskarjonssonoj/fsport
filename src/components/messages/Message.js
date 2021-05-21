@@ -2,12 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 
-const Message = ({message, setEachMessage}) => {
+const Message = ({message, setEachMessage, mark, checked, index}) => {
     return (
         <div className="message-box">
             <div className="message-title">
                 <h4>{message.title}</h4>
-                <div className="checkbox" id={message.state === 1 ? 'active' : 'inactive'}/>
+                <div className={checked && checked.includes(message.id) ? "checkbox checked" : "checkbox"} id={message.state === 1 ? 'active' : 'inactive'} onClick={() => mark(message, index)}/>
             </div>
             <div className="message-body" onClick={() => setEachMessage(message)}>
                 <p className="message-text">{message.body}</p>

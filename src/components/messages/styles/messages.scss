@@ -61,7 +61,12 @@
                     transform: skewX(-40deg);
                     position: absolute;
                     right: -1rem;
-                    cursor: pointer;          
+                    cursor: pointer;
+                    transition: 0.3s;          
+                }
+
+                .checked {
+                    background-color: rgb(107, 107, 253) !important;
                 }
     
                 #active {

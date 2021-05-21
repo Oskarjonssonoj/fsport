@@ -9,6 +9,7 @@ const Messages = ({eachMessage, setEachMessage}) => {
     const sortedMessages = MessagesInfo.messages.sort((a, b) => {return b.state > a.state});
     
     const [messages, setMessages] = useState('')
+    const [checked, setChecked] = useState([])
 
     const messagesSearch = useMemo(() => {
         if(!messages)
@@ -18,6 +19,16 @@ const Messages = ({eachMessage, setEachMessage}) => {
             return user.title.toLowerCase().includes( messages.toLowerCase() )
         })
     }, [messages, sortedMessages])
+
+
+    const markAMasg = (msg) => {
+        if(checked.includes(msg.id)) {
+            const remove = checked.filter(id => id !== msg.id)
+            setChecked(remove)
+        } else {
+            setChecked([...checked, msg.id])
+        }
+    }
 
 
     return (
@@ -35,8 +46,8 @@ const Messages = ({eachMessage, setEachMessage}) => {
                 </div>
 
                 {
-                    messagesSearch.map(message => {
-                        return <Message message={message} setEachMessage={setEachMessage}/>
+                    messagesSearch.map((message, index) => {
+                        return <Message message={message} setEachMessage={setEachMessage} mark={markAMasg} checked={checked} index={index}/>
                     })
                 }
             </div>
